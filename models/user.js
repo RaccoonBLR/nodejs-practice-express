@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-const Joi = require("joi");
 const { handleMongooseError } = require("../utils");
 
 const userScheme = new Schema(
@@ -22,24 +21,16 @@ const userScheme = new Schema(
       type: String,
       default: null,
     },
+    avatarURL: {
+      type: String,
+      required: [true, "avatar url is required"],
+    },
   },
   { versionKey: false, timestamps: true }
 );
 
 userScheme.post("save", handleMongooseError);
 
-const registerScheme = Joi.object({
-  email: Joi.string().email().required(),
-  password: Joi.string().min(6).required(),
-});
-
-const loginScheme = Joi.object({
-  email: Joi.string().email().required(),
-  password: Joi.string().min(6).required(),
-});
-
-const schemes = { registerScheme, loginScheme };
-
 const User = model("user", userScheme);
 
-module.exports = { User, schemes };
+module.exports = User;

@@ -1,5 +1,6 @@
 const express = require("express");
 const { validateBody, authenticate, upload } = require("../../middlewares");
+const { registerScheme, loginScheme } = require("../../schemes/users.js");
 const {
   register,
   login,
@@ -7,13 +8,12 @@ const {
   logout,
   updateAvatar,
 } = require("../../controllers/auth");
-const { schemes } = require("../../models/user");
 
 const router = express.Router();
 
-router.post("/register", validateBody(schemes.registerScheme), register);
+router.post("/register", validateBody(registerScheme), register);
 
-router.post("/login", validateBody(schemes.loginScheme), login);
+router.post("/login", validateBody(loginScheme), login);
 
 router.get("/current", authenticate, getCurrent);
 

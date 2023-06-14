@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const gravatar = require("gravatar");
 const path = require("path");
 const fs = require("fs/promises");
-const { User } = require("../models/user");
+const User = require("../models/user");
 const { ctrlWrapper, HttpError, avatarHandler } = require("../utils");
 
 const { SECRET_KEY } = process.env;
