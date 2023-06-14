@@ -1,10 +1,11 @@
 const express = require("express");
-const { validateBody, authenticate } = require("../../middlewares");
+const { validateBody, authenticate, upload } = require("../../middlewares");
 const {
   register,
   login,
   getCurrent,
   logout,
+  updateAvatar,
 } = require("../../controllers/auth");
 const { schemes } = require("../../models/user");
 
@@ -17,5 +18,7 @@ router.post("/login", validateBody(schemes.loginScheme), login);
 router.get("/current", authenticate, getCurrent);
 
 router.post("/logout", authenticate, logout);
+
+router.patch("/avatars", authenticate, upload.single("avatar"), updateAvatar);
 
 module.exports = router;
