@@ -11,3 +11,17 @@ GET /api/contacts/AeHIrLTr6JkxGE6SN-0Rw 16-05-2023_10:56:07
 GET /api/contacts/AeHIrLTr6JkxGE6SN-0Rw 16-05-2023_10:57:20
 GET /api/contacts/drsAJ4SHPYqZeG-83QTVW 16-05-2023_10:57:31
 GET /api/contacts/e6ywwRe4jcqxXfCZOj_1e 16-05-2023_10:58:26
+GET /api/register 14-06-2023_11:52:52
+POST /api/register 14-06-2023_11:52:56
+POST /api/register 14-06-2023_11:53:33
+POST /api/users/register 14-06-2023_11:54:13
+POST /api/users/login 14-06-2023_11:59:54
+PATCH /api/users/avatars 14-06-2023_12:20:52
+GET /favicon.ico 14-06-2023_12:21:14
+PATCH /api/users/avatars 14-06-2023_12:22:26
+PATCH /api/users/avatars 14-06-2023_12:22:35
+PATCH /api/users/avatars 14-06-2023_12:40:09
+PATCH /api/users/avatars 14-06-2023_12:41:00
+PATCH /api/users/avatars 14-06-2023_01:36:29
+
+
