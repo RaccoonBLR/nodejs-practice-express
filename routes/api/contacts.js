@@ -7,7 +7,11 @@ const {
   updateStatusContact,
   deleteById,
 } = require("../../controllers/contacts.js");
-const { validateBody, isValidId, authenticate } = require("../../middlewares");
+const {
+  validateBody,
+  isValidId,
+  authenticate,
+} = require("../../middlewares/index.js");
 const {
   addContactScheme,
   updateStatusContactScheme,

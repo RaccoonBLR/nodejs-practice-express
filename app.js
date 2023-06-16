@@ -6,7 +6,7 @@ const moment = require("moment");
 require("dotenv").config();
 
 const authRouter = require("./routes/api/auth");
-const contactsRouter = require("./routes/api/contacts-router");
+const contactsRouter = require("./routes/api/contacts");
 
 const app = express();
 
